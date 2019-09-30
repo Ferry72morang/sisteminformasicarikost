@@ -1,4 +1,4 @@
-# Sistem Informasi Cari Kost
+# Nantulang roa balang
 Sistem informasi Cari kos ini berfungsi untuk mempermudah Masyarakat terutama Mahasiswa atau Pekerja untuk menemukan tempat Kost, sesuai dengan Kriteria Kost yang mereka inginkan. 
 
 # User
