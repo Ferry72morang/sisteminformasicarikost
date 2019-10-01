@@ -6,6 +6,7 @@ Sistem informasi Cari kos ini berfungsi untuk mempermudah Masyarakat terutama Ma
 	    * Pelanggan
 ## Web
 Admin : 
+- Login
 - Input Data Kost
 	- Notifikasi Email informasi Kost ke pelanggan apabila ada kost yang kosong
 - Menampilkan informasi Kost
