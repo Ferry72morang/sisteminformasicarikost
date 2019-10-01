@@ -7,17 +7,18 @@ Sistem informasi Cari kos ini berfungsi untuk mempermudah Masyarakat terutama Ma
 ## Web
 Admin : 
 - Login
-- Input Data pesanan pelanggan
-	- Notifikasi Email informasi Kost ke pelanggan
-- Cek Kost yang masih kosong
-- Jika masih ada kost Kosong
-	- Notifikasi Email ke Pelanggan
+- Input Data Kost
+	- Notifikasi Email informasi Kost ke pelanggan apabila ada kost yang kosong
+- Menampilkan informasi Kost
+	- Lokasi Kost
+	- Data Pemilik Kost
+	- Penghuni
+	- Harga Kost
+	- Fasilitas
 - Verfikasi Pesanan
-- Fitur Hubungi kami
 ## Mobile
 Pelanggan :
-- Login
+- Login/Daftar
 - Rubah Password
 - Cek informasi Kost
-- Fitur Hubungi Kami
-	- Notifikasi Email ke Admin jika kriteria Kost cocok
+- Fitur hubungi Pemilik
