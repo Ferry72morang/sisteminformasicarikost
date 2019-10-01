@@ -15,10 +15,10 @@ Admin :
 	- Klasifikasi Penghuni
 	- Harga Kost
 	- Fasilitas
-- Verfikasi Pesanan
+- Fitur Diskusi
 ## Mobile
 Pelanggan :
-- Login/Daftar
-- Rubah Password
 - Cek informasi Kost
+- Fitur Diskusi
+- Subscribe (untuk menerima Notifikasi dari admin)
 - Fitur hubungi Pemilik
