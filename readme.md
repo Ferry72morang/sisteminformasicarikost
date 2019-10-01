@@ -1,4 +1,4 @@
-# Sistem Informasi Cari Kos
+# Sistem Informasi Cari Kost
 Sistem informasi Cari kos ini berfungsi untuk mempermudah Masyarakat terutama Mahasiswa atau Pekerja untuk menemukan tempat Kost, sesuai dengan Kriteria Kost yang mereka inginkan. 
 
 # User
@@ -12,7 +12,7 @@ Admin :
 - Menampilkan informasi Kost
 	- Lokasi Kost
 	- Data Pemilik Kost
-	- Penghuni
+	- Klasifikasi Penghuni
 	- Harga Kost
 	- Fasilitas
 - Verfikasi Pesanan
