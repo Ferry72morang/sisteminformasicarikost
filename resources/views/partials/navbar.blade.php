@@ -9,12 +9,12 @@
         <a href="{{route("home")}}" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-          <a href="{{route("home")}}" class="nav-link">Input</a>
-        </li>
-        <li class="nav-item d-none d-sm-inline-block">
-            <a href="{{route("home")}}" class="nav-link">Detail Pemilik Kost</a>
-          </li>
-         
+        <a href="{{route("admin.index")}}" class="nav-link">Data pemilik Kost</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="{{route("home")}}" class="nav-link">Pesan</a>
+      </li>
+     
     </ul>
 
    

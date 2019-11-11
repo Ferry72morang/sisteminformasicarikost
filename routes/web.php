@@ -21,6 +21,8 @@ Route::middleware("auth")->group(function(){
 Route::get('home', function () {
     return view('pages.home');
 })->name("home");
+
+Route::resource('admin','AdminController');
 });
 
 Route::get('register', function () {
