@@ -1,8 +1,10 @@
 <?php
+
 namespace App\Http\Controllers;
+
 use Illuminate\Http\Request;
-use App\admin;
-class AdminController extends Controller
+use App\Input;
+class InputController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -11,9 +13,10 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $data = admin::paginate(10);
-        return view("pages.admin.list",compact("data"));
+        $data = Input::paginate(10);
+        return view("pages.input.list",compact("data"));
     }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -21,8 +24,9 @@ class AdminController extends Controller
      */
     public function create()
     {
-        return view("pages.admin.form");
+        return view("pages.input.form");
     }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -32,15 +36,22 @@ class AdminController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'idn' => 'required|max:8',
-            'nama' => 'required|max:50',
+            'idk' => 'required|max:8',
             'alamat' => 'required|max:50',
-            'telepon' => 'required|max:25'
+            'kdpos' => 'required|max:50',
+            'klasifikasi' => 'required|max:25',
+            'fasilitas' => 'required|max:25',
+            'ukuran' => 'required|max:25',
+            'luas' => 'required|max:25',
+            'idn' => 'required|max:25',
+            'harga' => 'required|max:25',
+            'gambar' => 'required|max:25'
         ]);
-        admin::create($request->except("_token"));
-        $request->session()->flash("info","Berhasil Tambah Data Pemilik Kost");
-        return redirect()->route("admin.index");
+        Input::create($request->except("_token"));
+        $request->session()->flash("info","Berhasil Tambah Data Kost");
+        return redirect()->route("input.index");
     }
+
     /**
      * Display the specified resource.
      *
@@ -49,9 +60,10 @@ class AdminController extends Controller
      */
     public function show($id)
     {
-        $data = admin::find($id);
-        return view("pages.admin.form",compact("data"));
+        $data = Input::find($id);
+        return view("pages.input.form",compact("data"));
     }
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -62,6 +74,7 @@ class AdminController extends Controller
     {
         //
     }
+
     /**
      * Update the specified resource in storage.
      *
@@ -72,16 +85,23 @@ class AdminController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'idn' => 'required|max:8',
-            'nama' => 'required|max:50',
+            'idk' => 'required|max:8',
             'alamat' => 'required|max:50',
-            'telepon' => 'required|max:25'
+            'kdpos' => 'required|max:50',
+            'klasifikasi' => 'required|max:25',
+            'fasilitas' => 'required|max:25',
+            'ukuran' => 'required|max:25',
+            'luas' => 'required|max:25',
+            'idn' => 'required|max:25',
+            'harga' => 'required|max:25',
+            'gambar' => 'required|max:25'
         ]);
-        admin::where("id",$id)
+        Input::where("id",$id)
                 ->update($request->except(["_token","_method"]));
-        $request->session()->flash("info","Berhasil Rubah Data Pemilik Kost");
-        return redirect()->route("admin.index");
+        $request->session()->flash("info","Berhasil Rubah Data Kost");
+        return redirect()->route("input.index");
     }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -90,8 +110,8 @@ class AdminController extends Controller
      */
     public function destroy($id)
     {
-        admin::destroy($id);
-        return redirect()->route("admin.index")
-            ->with("info","Berhasil Hapus Data admin");
+        Input::destroy($id);
+        return redirect()->route("input.index")
+            ->with("info","Berhasil Hapus Data kost");
     }
 }

@@ -15,6 +15,7 @@ class CreateAdminsTable extends Migration
     {
         Schema::create('tbladmin', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string("idn",8);
             $table->string("nama",50);
             $table->string("alamat",50);
             $table->string("telepon",25);

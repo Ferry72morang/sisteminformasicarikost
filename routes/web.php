@@ -1,5 +1,5 @@
 <?php
-
+use App\admin;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,10 +19,18 @@ Auth::routes();
 
 Route::middleware("auth")->group(function(){
 Route::get('home', function () {
-    return view('pages.home');
+    if (Auth::user()->level=='a'){
+        $data=admin::paginate(10);
+        return view("pages.admin.list",compact("data"));
+       
+    }else{
+
+    return view('pages.home');}
 })->name("home");
 
+
 Route::resource('admin','AdminController');
+Route::resource('input','InputController');
 });
 
 Route::get('register', function () {
@@ -32,3 +40,7 @@ Route::get('register', function () {
 Route::get('login', function () {
     return view('pages.login');
 })->name("login")->middleware("guest");
+
+
+
+
